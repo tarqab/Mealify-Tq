@@ -1,0 +1,549 @@
+*, *::before , *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.body {
+    font-family: 'Roboto Slab', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a,span {
+    display: inline-block;  /* to respect the width, height padding top and magrin top*/
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+img {
+    display: block;
+}
+
+
+.container {
+    padding: 40px 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    margin-inline:auto;
+}
+
+.btn {
+    margin-right: 10px;
+    border-radius: 0px 10px 10px 10px;
+    border: solid 2px transparent;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    background-color: red;
+    padding-top: 3px;
+}
+
+
+
+
+
+.navbar {
+    box-shadow:  20px 1px 10px #aca7a7,
+    -20px -20px 60px #ffffff;
+}
+.navbar .container{
+    display: flex ;
+    height: 100px;
+    display: flex;
+    justify-content:space-around;
+    box-sizing: border-box;
+    align-items:center ;
+}
+
+.left-navbar {
+font-size: 30px;
+}
+.dot {
+    color: red;
+
+}
+
+.list-pages span{
+margin-right: 15px;
+font-size: 18px; 
+position:relative;
+}
+.list-pages span::before{
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: 0px;
+  background-color: red;
+  transition: width 1s , height 1s;
+  
+}
+.list-pages span:hover{
+    cursor: pointer;
+}
+.list-pages span:hover::before {
+    width: 100%;
+    height: 2px; 
+    
+}
+
+
+.navbar img {
+ width: 25px;
+
+}
+
+.home {
+    width: 100%;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+}
+.home .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.home .container >* {    /* all direct Child*/
+    width: 40%;
+}
+
+.left-home-container {
+    width: 45%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    
+}
+.left-home-container h2 {
+    font-size: 40px;
+}
+
+.btn-main {
+color:white;
+}
+
+.bottom-home {
+    display: flex;
+    align-items: center;
+    gap:10px
+}
+.icon-hero {
+    display: flex;
+    align-items: center;
+}
+.right-home-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.right-home-container img {
+    width: 100%;
+    
+}
+.right-home-container img:hover {
+    animation: myAnim 1s ease 0s 3;
+}
+
+
+
+.play-trailer {
+    display: inline-block;
+    
+}
+.play-trailer:hover {
+    cursor: pointer;
+}
+.play-trailer img {
+    width: 40px;
+    vertical-align:middle;
+}
+
+
+@keyframes myAnim {
+	0% {
+		transform: translate(0);
+	}
+
+	10% {
+		transform: translate(-2px, -2px);
+	}
+
+	20% {
+		transform: translate(2px, -2px);
+	}
+
+	30% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(2px, 2px);
+	}
+
+	50% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, -2px);
+	}
+
+	70% {
+		transform: translate(-2px, 2px);
+	}
+
+	80% {
+		transform: translate(-2px, -2px);
+	}
+
+	90% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+/*  -------------- Chefs ------------- */
+.chefs { 
+
+}
+    
+ .chefs .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titles{
+    margin: 20px 0px;
+    text-align: center;
+}
+.titles h4 {
+    font-size: 20px;
+}
+
+.titles p {
+    font-size: 30px ;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+  
+    width: 90%;
+}
+
+.card {
+    text-align: center;
+    margin: 10px;
+    transition: scale 0.5s;
+   
+}
+.card:hover {
+    scale: 103%;
+}
+.card-container img {
+   width: 100% ;
+   
+}
+.card-container h5 {
+    margin-top: 15px ;
+}
+.img-container {
+    position: relative;
+}
+.img-container::before {
+    content:"";
+    width: 100%;
+    height: 50px;
+    background-image: url("assest/team-shape.svg");
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    
+}
+
+
+/*  ----------------  Gallery ------------------  */
+
+.gallery {
+    background-color: azure;
+}
+.gellery-tittles {
+    text-align: center;
+    margin-bottom:50px;
+}
+
+.gallery-photos {
+--gap:1.25rem;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+gap:var(--gap);
+height: 72.8125rem;
+
+}
+
+.gallery-photos picture {
+width: calc(calc(100% - var(--gap) * 2 ) /3);
+position: relative;
+overflow: hidden;
+}
+
+.gallery-photos img{
+    width: 100%;
+    transition: scale 1s  ;
+}
+
+.gallery-photos picture:hover img{
+    scale: 1.1;
+}
+.gallery-photos .layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: white;
+    left: 0;
+    top: 100%;
+    background-color: #00000096;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .5s top;
+   
+
+}
+.gallery-photos picture:hover .layer {
+    top: 0;
+    
+}
+
+
+
+
+.contact{
+    background-color: cadetblue;
+    padding: 15px;
+}
+.contact .container{
+    font-size: 20px;
+}
+.contact-titles {
+    text-align: center;
+}
+.contant-titles p {
+ font-size: 30px;
+}
+
+.contacts-method {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15px;
+    --gap:20px;
+    gap: var(--gap);
+}
+.method {
+    background-color: aliceblue;
+    display: flex;
+    align-items: center ;
+    width : calc(calc(100% - var(--gap)) /2);
+    height: 90px;
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+.icon {
+   font-size: 20px; 
+   background-color: rgba(255, 0, 0, 0.623);
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.info {
+   display: inline-block; 
+   margin-left: 7px;
+}
+.contact .container form {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center ;
+    background-color: #ffffff;
+    height: 50%;
+    padding: 20px;
+}
+
+.input-group {
+ display: flex;
+ --gap:20px; 
+ gap:var(--gap);
+ width: 100%;      
+}
+.input-group input {
+    width: calc(calc(100% - var(--gap)) /2);
+}
+
+form :is(input, textarea) {
+padding: 10px;
+width: 100%;
+border: 1px solid;
+border-color: inherit;
+}
+
+form :is(input, textarea):focus {
+ outline: none;
+ border-color: red;  
+}
+
+form textarea {
+    resize: vertical;
+    max-height: 500px ;
+}
+form .btn {
+    text-align: center;
+}
+form .btn:hover {
+    cursor: pointer;
+}
+
+
+/* ------------ About ---------------  */
+
+
+.about {
+    background-color: black;
+    color: white;
+}
+.about .container {
+   display: flex;
+   --gap: 20px;
+   gap: var(--gap);
+   
+}
+
+.about .container :is(.left-about, .right-about) {
+    width: calc(calc(50% - var(--gap)) /2);
+}
+.about .container .middle-about {
+    width: calc(50% - var(--gap));
+}
+
+.left-about :not(img)  {
+    padding: 10px;
+}
+.mealfy-icon {
+    display: flex;
+    align-items: center; 
+}
+
+.mealfy-icon img {
+    width: 30px;
+    margin-right: 10px;
+}
+.mealfy-icon h3 {
+ font-size: 30px;
+ 
+}
+.social-media-icons {
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+}
+.social-media-icons *:hover {
+cursor: pointer;
+}
+
+.left-about h2{
+text-align: center;
+}
+
+
+.middle-about {
+
+}
+
+.middle-about h2 {
+    margin-bottom: 5px;
+}
+.middle-about .enter-mail {
+    margin: 10px 0 10px 0;
+    border: solid 1px ;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    color: transparent;
+}
+
+.enter-mail input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    padding: 10px;
+}
+
+.enter-mail button {
+    background-color: red;
+    color: white;
+}
+
+.middle-about ul {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    --gap:20px;
+    gap:var(--gap);
+   
+   
+}
+
+.middle-about ul li {
+    width: calc(calc(100% - var(--gap)) / 2);
+    font-size: 18px;
+    transition:transform .4s;
+   
+}
+.middle-about ul li:before {
+  font:var(--fa-font-solid);
+  content: "\f105";  
+}
+
+.middle-about ul li:hover {
+    transform: translateX(10px);
+}
+
+
+.right-about  h3 {
+    margin: 10px 0;
+}
+.right-about i {
+margin-right: 5px;
+color: red;
+}
+
+.right-about span {
+    text-align: center;
+    margin: 7px 0;
+} 
